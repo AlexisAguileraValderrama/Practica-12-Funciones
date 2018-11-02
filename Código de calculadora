@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <conio.h>
+#define p printf
+#define s scanf
+
+float a,b, res;
+int o;
+void suma (float x, float y);
+void resta (float x, float y);
+void mult (float x, float y);
+void div (float x, float y);
+
+main(){
+	
+	p("Menu\n");
+	p("1) suma\n");
+	p("2) resta\n");
+	p("3) multiplicacion\n");
+	p("4) division\n");
+	s("%d",&o);
+	p("Dame un nuemero: ");
+	s("%f",&a);
+	p("Dame otro numero: ");
+	s("%f",&b);
+	switch (o){
+		
+		case 1:
+			suma (a,b);
+		break;
+		case 2:
+			resta(a,b);
+		break;
+		case 3:
+			mult(a,b);
+		break;
+		case 4:
+			div(a,b);
+		break;
+		
+	}
+	
+	
+}
+
+void suma (float x, float y){
+	res = x + y;
+	p("La suma de %.2f + %.2f es %.2f",x,y,res);
+}
+void resta (float x, float y){
+	res = x - y;
+	p("La resta de %.2f - %.2f es %.2f",x,y,res);
+}
+void mult (float x, float y){
+	res = x * y;
+	p("La multiplicacion de %.2f * %.2f es %.2f",x,y,res);
+}
+void div (float x, float y){
+	res = x / (float)y;
+	p("La division de %.2f / %.2f es : %.2f",x,y,(float)res);
+}
